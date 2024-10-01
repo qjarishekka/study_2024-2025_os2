@@ -97,12 +97,12 @@ header-includes:
 
 ![подключение к учётной записи root](image/1.png){#fig:001    width=70%}
 
-Потом я создал каталог main и third в каталоге data (рис. [-@fig:003     ]).
+Потом я создал каталог main и third в каталоге data (рис. [-@fig:002     ]).
 
 
 		mkdir -p /data/main /data/third
   
-![создание каталогов main и  third](image/2.png){#fig:001    width=70%}
+![создание каталогов main и  third](image/2.png){#fig:002    width=70%}
 
 и затем я убедился что каталоги создались правильно и кто является владелцем (рис. [-@fig:003     ]).
 
@@ -189,7 +189,7 @@ header-includes:
 
 		su - bob
 
-![новый терминал с пользователем bob](image/14.png){#fig:01    width=70%}
+![новый терминал с пользователем bob](image/14.png){#fig:014    width=70%}
 
 
 Дальше я перешел в каталог /data/main (рис. [-@fig:015    ]).
@@ -219,7 +219,7 @@ header-includes:
 
 ![создание файлов bob1 и bob2](image/18.png){#fig:018    width=70%}
 
-потом в терминале под ползователем root я установил бит идентификатора группы для каталога /data/main, а также stiky-bit для разделяемого каталога группы (рис. [-@fig:0189    ]).
+потом в терминале под ползователем root я установил бит идентификатора группы для каталога /data/main, а также stiky-bit для разделяемого каталога группы (рис. [-@fig:018    ]).
 
 		chmod g+s,o+t /data/main
 
@@ -255,7 +255,7 @@ header-includes:
 ![устновление прав](image/22.png){#fig:022    width=70%}
 
 
-Потом я создал файл newfile1 в каталоге /data/main (рис. [-@fig:024    ]).
+Потом я создал файл newfile1 в каталоге /data/main (рис. [-@fig:023    ]).
 
 		touch /data/main/newfile1
 
@@ -267,7 +267,7 @@ header-includes:
 
 		getfacl /data/main/newfile1
 		
-![проверка текущих назначений полномочий](image/25.png){#fig:024    width=70%}
+![проверка текущих назначений полномочий](image/25.png){#fig:025    width=70%}
 
 
 		
@@ -308,9 +308,9 @@ header-includes:
 Потом я сделал еще раз те дейтсвия для каталога data/third (рис. [-@fig:031    ]) (рис. [-@fig:032    ]).
 
 
-![](image/31.png){#fig:031    width=70%}
+![создание файла newfile3](image/31.png){#fig:031    width=70%}
 
-![Название рисунка](image/32.png){#fig:032    width=70%}
+![проверка файла newfile3](image/32.png){#fig:032    width=70%}
 
 
 
@@ -326,13 +326,13 @@ header-includes:
 		rm /data/main/newfile2
 
 	
-![удаление файлов](image/placeimg_800_600_tech.png){#fig:035    width=70%}
+![удаление файлов](image/35.png){#fig:035    width=70%}
 
 
-Потом я попробовал другую команду в терминале (рис. [-@fig:035    ]).
+Потом я попробовал другую команду в терминале (рис. [-@fig:036    ]).
 
 
-![echo](image/35.png){#fig:035    width=70%}
+![echo](image/36.png){#fig:036    width=70%}
 
 
 пользователь carol не может изменять ничего в каталогах потому что у неё нет доступа
