@@ -5,7 +5,7 @@ subtitle: "Простейший вариант"
 author: "Дмитрий Сергеевич Кулябов"
 
 ## Generic otions
-lang: ru-RU
+LANG : ru_RU
 toc-title: "Содержание"
 
 ## Bibliography
