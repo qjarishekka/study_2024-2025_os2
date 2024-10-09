@@ -271,6 +271,9 @@ header-includes:
 		ctrl + c
 		fg3
 		ctrl + c
+![изменение приоритета](image/27.png){#fig:021	 width=70%}
+
+  
 
 Затем я начал вторей задание.
 
