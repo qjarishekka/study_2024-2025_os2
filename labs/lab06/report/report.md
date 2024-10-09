@@ -200,7 +200,7 @@ header-includes:
 
 
 
-![выполнение заданий](image/16.png){#fig:014	 width=70%}
+![выполнение заданий](image/17.png){#fig:014	 width=70%}
 
 
 Они выполняют задания в фоновом режиме.
@@ -209,7 +209,7 @@ header-includes:
 
 		ps aux | grep dd
 
-![список заданий](image/17.png){#fig:015	 width=70%}
+![список заданий](image/19.png){#fig:015	 width=70%}
 
 
 Эта команда показывает все строки, в которых есть буквы dd
@@ -220,7 +220,7 @@ header-includes:
 
 
 
-![изменеие приоритета](image/18.png){#fig:016	 width=70%}
+![изменеие приоритета](image/20.png){#fig:016	 width=70%}
 
 
 
@@ -228,7 +228,7 @@ header-includes:
 
 		ps fax | grep -B5 dd
 
-![команда ps](image/19.png){#fig:017	 width=70%}
+![команда ps](image/20.png){#fig:017	 width=70%}
 
 
 Дальше я использовал команду kill чтобы завершить задание (рис. [-@fig:018   ]).
