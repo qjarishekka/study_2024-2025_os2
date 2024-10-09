@@ -166,13 +166,13 @@ header-includes:
 
 		top
 		
-![команда top](image/12.png){#fig:011	 width=70%}
+![команда top](image/13.png){#fig:011	 width=70%}
 		
 Вверху таблицы можно смотреть задание dd. Затем я вышел оттуда нажав клавишу q (рис. [-@fig:012   ]).
 		
 		q
 		
-![выход от таблицы](image/13.png){#fig:012	 width=70%}
+![выход от таблицы](image/14.png){#fig:012	 width=70%}
 
 
 Потом я еще раз выполнил команду top и завершил задание оттуда  (рис. [-@fig:013   ]).
@@ -181,7 +181,7 @@ header-includes:
 		k
 		`enter`
 
-![завершение заданий](image/14.png){#fig:013	 width=70%}
+![завершение заданий](image/15.png){#fig:013	 width=70%}
 
 
 
@@ -200,7 +200,7 @@ header-includes:
 
 
 
-![выполнение заданий](image/15.png){#fig:014	 width=70%}
+![выполнение заданий](image/16.png){#fig:014	 width=70%}
 
 
 Они выполняют задания в фоновом режиме.
@@ -209,7 +209,7 @@ header-includes:
 
 		ps aux | grep dd
 
-![список заданий](image/16.png){#fig:015	 width=70%}
+![список заданий](image/17.png){#fig:015	 width=70%}
 
 
 Эта команда показывает все строки, в которых есть буквы dd
@@ -220,7 +220,7 @@ header-includes:
 
 
 
-![изменеие приоритета](image/17.png){#fig:016	 width=70%}
+![изменеие приоритета](image/18.png){#fig:016	 width=70%}
 
 
 
@@ -228,14 +228,14 @@ header-includes:
 
 		ps fax | grep -B5 dd
 
-![команда ps](image/18.png){#fig:017	 width=70%}
+![команда ps](image/19.png){#fig:017	 width=70%}
 
 
 Дальше я использовал команду kill чтобы завершить задание (рис. [-@fig:018   ]).
 
 		kill -9 <PID>
 
-![команад kill](image/19.png){#fig:018	 width=70%}
+![команад kill](image/20.png){#fig:018	 width=70%}
 
 
 Потом я начал выполнить задание 1 
