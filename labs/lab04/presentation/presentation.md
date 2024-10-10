@@ -1,6 +1,6 @@
 ---
 ## Front matter
-lang: ru-RU
+lang: en_US.utf-8
 title: Прецентация лабораторной работы № 4.
 subtitle: Работа с программными пакетами
 author:

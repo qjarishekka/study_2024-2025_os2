@@ -9,7 +9,7 @@ PDF_FORMAT_OPTIONS = -t beamer --slide-level=2
 
 FILTERS += --citeproc
 # FILTERS += -F pandoc-crossref
-PDF_ENGINE += --pdf-engine=lualatex
+PDF_ENGINE += --pdf-engine=lualatex --pdf-engine-opt=--shell-escape
 PDF_OPTIONS += --number-sections
 
 REVEALJS_THEME = beige
