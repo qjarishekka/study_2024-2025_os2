@@ -165,6 +165,16 @@ header-includes:
 
 # Задание 2
 
+- nohup yes &
+- nohup yes
+- Ctrl + Z
+- nohup yes
+-
+
+
+
+
+
 
 
 
