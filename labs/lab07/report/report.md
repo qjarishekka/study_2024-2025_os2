@@ -147,19 +147,108 @@ header-includes:
 ![мониторинг сообщений безопасности](image/09.png){#fig:009    width=70%}
 
 
+Дальше я начал другую часть лабораторной работы.
+
+Сначала я установил утилит httpd (рис. [-@fig:010  ]).
+
+		dnf -y install httpd
+
+![установка httpd](image/10.png){#fig:010    width=70%}
+
+Потом я инициализировал его (рис. [-@fig:011  ]).
+
+		systemctl start httpd
+		systemctl enable httpd
+
+
+![запуск утилита](image/11.png){#fig:011    width=70%}
+
+Потом во второй вкладке терминала я смотрел журнал сообщений об ошибах веб-службы (рис. [-@fig:012  ]).
+
+		tail -f /var/log/httpd/error_log
+		
+![журнал сообщений об ошибах](image/12.png){#fig:012    width=70%}
+
+
+Потом я перешел в третьюю вкладку и получил полномочия администратора (рис. [-@fig:013  ]). и в файле /etc/httpd/conf/httpd.conf я добавил одну строку (рис. [-@fig:014  ]).
+
+		su -
+		vim /etc/httpd/conf/httpd.conf
+		Errorlog syslog:local1
+		:wq
+
+
+![пользователь root](image/13.png){#fig:013    width=70%}
+
+
+![изменение файла /etc/httpd/conf/httpd.conf](image/14.png){#fig:014    width=70%}
+
+Потом я перешел в друкой каталог /etc/rsyslog.d и создал один файл "httpd.conf" (рис. [-@fig:015  ]).
+
+		cd /etc/rsyslog.d
+		touch httpd.conf
+		
+![httpd.conf](image/15.png){#fig:015    width=70%}
+
+В этом файле я добавил одну строку и сохранил его (рис. [-@fig:016  ]).
+		
+		mcedit httpd.conf
+		local1.* -/var/log/httpd-error.log
+		
+		f10
+
+![новая строка](image/16.png){#fig:016    width=70%}
+
+
+Дальше я перешел в первую вкладку терминала и перезагрузил конфигурацию rsyslogd и веб-службу (рис. [-@fig:017  ]).
+
+		systemctl restart rssyslog.service
+		systemctl restart httpd
+
+![перезагрузка конфигурацию rsyslogd и веб-службу](image/17.png){#fig:017    width=70%}
+
+
+Затем я перешел в третьюю вкладку и создал отдельный файл конфигурации для мониторинга отладочной информации (рис. [-@fig:019  ]).
+
+		cd /etc/rsyslog.d
+		touch debug.conf
+		echo "*.debug /var/log/messages-debug" > /etc/rsyslog.d/debug.conf
+
+![конфигурация для мониторинга отладочной информации](image/19.png){#fig:019    width=70%}
+
+
+Потом еще раз в первой вкладке терминала снова перезапустил rsyslogd (рис. [-@fig:020 ]).
+
+		systemctl restart rsyslog.service
+
+![перезапуск rsyslogd](image/20.png){#fig:020    width=70%}
+
+Затем во второй вкадке терминала я запустил мониторинг отладочной информации (рис. [-@fig:021  ]).
+
+		tail -f /var/log/messages-debug
+
+![мониторинг отладочной информации ](image/21.png){#fig:021    width=70%}
+
+
+Потом я в третьей вкладке терминала выполнил команду logger  (рис. [-@fig:022  ]).
+
+		logger -p daemon.debug "Daemon Debug Message
+
+![logger ](image/22.png){#fig:022    width=70%}
+
+
+Затем я закрыл трассиворку файла журнала во второй вкладке (рис. [-@fig:024  ]).
+
+		Ctrl + c
+
+![закрытие трассироваки файла журнала ](image/24.png){#fig:024    width=70%}
 
 
 
 
+(рис. [-@fig:02  ]).
 
-
-
-
-
-
-(рис. [-@fig:00  ]).
-
-![Название](image/placeimg_800_600_tech.png){#fig:00    width=70%}
+![Название](image/placeimg_800_600_tech.png){#fig:02    width=70%}
 
 # Выводы
 
