@@ -47,7 +47,7 @@ header-includes:
    - lsmod | grep ext4
    
 :::::::::::::: {.columns align=center}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 ![](./image/03.png) 
 
@@ -58,8 +58,9 @@ header-includes:
 - команды:
    - modprobe ext4
    - modinfo ext4
+   
 :::::::::::::: {.columns align=center}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 ![](./image/06.png) 
 
@@ -72,16 +73,19 @@ header-includes:
 - команды:
    - modprobe -r ext4
    - modprobe -r xfs
+   
 :::::::::::::: {.columns align=center}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
-![](./image/2.png) 
+![](./image/09.png) 
 
 :::
 ::::::::::::::
 
 
 # Загрузка модулей ядра с параметрами
+
+
 
 команды:
    - lsmod | grep bluetooth
@@ -91,26 +95,63 @@ header-includes:
    - modprobe -r bluetooth
 
 :::::::::::::: {.columns align=center}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 ![](./image/09.png) 
 
 :::
 ::::::::::::::
 
+# Обновление ядра системы
 
 
+## обновление оперативной системы
 
+команды:
 
-
-
+   - uname -r
+   - dnf list kernel
+   - dnf upgrade --refresh
 
 :::::::::::::: {.columns align=center}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
-![](./image/2.png) 
+![](./image/16.png) 
 
 :::
 ::::::::::::::
+   
+
+## обновление ядра системы
+   
+   - dnf update kernel
+   - dnf update
+   - dnf updrade --refresh
+
+:::::::::::::: {.columns align=center}
+::: {.column width="60%"}
+
+![](./image/20.png) 
+
+:::
+::::::::::::::
+
+   
+## проверка обновления ядра
+   - uname -r
+   - hostnamectl
+   
+:::::::::::::: {.columns align=center}
+::: {.column width="60%"}
+
+![](./image/22.png) 
+
+:::
+::::::::::::::
+
+# СПАСИБО ЗА ВНИМАНИЕ
+
+
+
 
 
