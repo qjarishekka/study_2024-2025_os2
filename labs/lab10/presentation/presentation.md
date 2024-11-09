@@ -35,7 +35,73 @@ header-includes:
 
 # Лабораторная работа 
 
-## Последовательность выполнения работы
+# Последовательность выполнения работы
+
+# Управление модулями ядра из командной строки
+
+## устновленные устройства и модули
+
+- команды:
+   - lspci -k
+   - lsmod | sort
+   - lsmod | grep ext4
+   
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/03.png) 
+
+:::
+::::::::::::::
+   
+## загрузка модулей и информация
+- команды:
+   - modprobe ext4
+   - modinfo ext4
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/06.png) 
+
+:::
+::::::::::::::
+
+   
+   
+## выгрузка модулей
+- команды:
+   - modprobe -r ext4
+   - modprobe -r xfs
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/2.png) 
+
+:::
+::::::::::::::
+
+
+# Загрузка модулей ядра с параметрами
+
+команды:
+   - lsmod | grep bluetooth
+   - modprobe bluetooth
+   - lsmod | grep bluetooth
+   - modinfo bluetooth
+   - modprobe -r bluetooth
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/09.png) 
+
+:::
+::::::::::::::
+
+
+
+
+
 
 
 
