@@ -35,16 +35,88 @@ header-includes:
 
 # Лабораторная работа 
 
-## Последовательность выполнения работы
+# Последовательность выполнения работы
+
+# Управление брандмауэром с помощью firewall-cmd
+
+## Управление брандмауэром с помощью firewall-cmd
+
+
+
+- команды для информации:
+	firewall-cmd --get-default-zone
+	firewall-cmd --get-zones
+	firewall-cmd --get-services
+	firewall-cmd --list-services
+	firewall-cmd --list-all
+	firewall-cmd --list-all --zone=public
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/06.png) 
+
+:::
+::::::::::::::
+
+## Управление брандмауэром с помощью firewall-cmd
+
+- команды:
+	firewall-cmd --add-service=vnc-server
+	firewall-cmd --list-all
+	systemctl restart firewalld
+	firewall-cmd --list-all
+	firewall-cmd --add-service=vnc-server --permanent
+	firewall-cmd --list-all
+	
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/12.png) 
+
+:::
+::::::::::::::
+
+
+## Управление брандмауэром с помощью firewall-cmd
+
+- команды: 
+	firewall-cmd --reload
+	firewall-cmd --list-all
+	firewall-cmd --add-port=2022/tcp --permanent
+	firewall-cmd --reload
+	firewall-cmd --list-all
+
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+![](./image/17.png) 
+
+:::
+::::::::::::::
+
+# Управление брандмауэром с помощью firewall-config
+## Управление брандмауэром с помощью firewall-config
+
+- команды:
+
+	firewall-config
+	firewall-cmd --list-all
+	firewall-cmd --reload
+	firewall-cmd --list-all
+
 
 
 
 :::::::::::::: {.columns align=center}
 ::: {.column width="70%"}
 
-![](./image/2.png) 
+![](./image/18.png) 
 
 :::
 ::::::::::::::
+
 
 
